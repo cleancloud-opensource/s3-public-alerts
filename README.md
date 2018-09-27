@@ -2,6 +2,9 @@
 
 This AWS Lambda function handler is part of the following AWS architecture to help users identifying S3 buckets or objects which were exposed publicly, causing customer data leaks in AWS cloud environments.
 
+![aws architecture](https://github.com/cleancloud-opensource/s3-public-alerts/blob/master/aws_architecture.png)
+
+
 ## Requirements
 
 - CloudTrail enabled on AWS accounts. *[How to here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)*
