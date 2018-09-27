@@ -5,6 +5,12 @@ This AWS Lambda function handler is part of the following AWS architecture to he
 ![aws architecture](https://github.com/cleancloud-opensource/s3-public-alerts/blob/master/aws_architecture.png)
 
 
+## Important note
+
+For object alerts it is required to enable an AWS CloudTrail trail to log data events for objects in an S3 bucket. *[How to here](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-cloudtrail-events.html)*
+Additional charges apply for data events. *[Check pricing here](https://aws.amazon.com/pt/cloudtrail/pricing/)*
+
+
 ## Requirements
 
 - CloudTrail enabled on AWS accounts. *[How to here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)*
@@ -12,6 +18,7 @@ This AWS Lambda function handler is part of the following AWS architecture to he
 - SNS topic to send notifications to subscribers. *[How to here](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)*
 - Subscritpion to SNS topic to receive emails from. *[How to here](https://docs.aws.amazon.com/sns/latest/dg/SubscribeTopic.html)*
 - IAM role with access permissions specified on following section. *[How to here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html)*
+
 
 ## IAM role
 
@@ -36,6 +43,7 @@ Create a policy with following permissions and associate this policy with an IAM
     ]
 }
 ```
+
 
 ## Setup
 
