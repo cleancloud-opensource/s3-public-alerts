@@ -7,17 +7,17 @@ This AWS Lambda function handler is part of the following AWS architecture to he
 
 ## Important note
 
-For object alerts it is required to enable an AWS CloudTrail trail to log data events for objects in an S3 bucket. *[How to here](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-cloudtrail-events.html)*
-Additional charges apply for data events. *[Check pricing here](https://aws.amazon.com/pt/cloudtrail/pricing/)*
+For object alerts it is required to enable an AWS CloudTrail trail to log data events for objects in an S3 bucket. [Learn more](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-cloudtrail-events.html)
+Additional charges apply for data events. [Learn more](https://aws.amazon.com/pt/cloudtrail/pricing/)
 
 
 ## Requirements
 
-- CloudTrail enabled on AWS accounts. *[How to here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)*
-- S3 bucket to receive CloudTrail logs. *[How to here](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html)*
-- SNS topic to send notifications to subscribers. *[How to here](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)*
-- Subscritpion to SNS topic to receive emails from. *[How to here](https://docs.aws.amazon.com/sns/latest/dg/SubscribeTopic.html)*
-- IAM role with access permissions specified on following section. *[How to here](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html)*
+- CloudTrail enabled on AWS accounts. [Learn more](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-a-trail-using-the-console-first-time.html)
+- S3 bucket to receive CloudTrail logs. [Learn more](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html)
+- SNS topic to send notifications to subscribers. [Learn more](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)
+- Subscritpion to SNS topic to receive emails from. [Learn more](https://docs.aws.amazon.com/sns/latest/dg/SubscribeTopic.html)
+- IAM role with access permissions specified on following section. [Learn more](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html)
 
 
 ## IAM role
@@ -47,7 +47,7 @@ Create a policy with following permissions and associate this policy with an IAM
 
 ## Setup
 
-- Create a Lambda function with following configuration: *[How to here](https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)*
+- Create a Lambda function with following configuration: [Learn more](https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)
   - runtime: Python 2.7 
   - handler: **lambda_function.lambda_handler**
   - code: upload or copy and paste lambda_function.py
